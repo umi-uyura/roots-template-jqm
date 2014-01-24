@@ -1,0 +1,25 @@
+doctype html
+html(lang="ja")
+  head
+    include _layout_head_meta
+
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    title= title
+
+    include _layout_head_style
+
+  body
+    #page-template(data-role="page")
+      div(data-role="header")
+        h1= title
+
+      div(data-role="content")
+        p This is template file for jQuery Mobile with Roots!
+
+      div(data-role="footer")
+        h4 Copyright (C) 20xx
+
+    include _layout_body_scripts
+
+    include _ga

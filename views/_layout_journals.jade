@@ -1,0 +1,25 @@
+doctype html
+html(lang="ja")
+  head
+    include _layout_head_meta
+
+    meta(name="description", content="#{post.description}")
+    meta(name="keywords", content="#{post.keywords}")
+    title= post.title
+
+    include _layout_head_style
+
+  body
+    div(data-role="page")
+      div(data-role="header", data-add-back-btn="true")
+        h1= post.title
+
+      div(role="main", data-role="ui-content")
+        != content
+
+      div(data-role="footer")
+        h4 Copyright (C) 20xx
+
+    include _layout_body_scripts
+
+    include _ga
